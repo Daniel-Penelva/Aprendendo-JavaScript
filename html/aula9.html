@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Alterando o DOM com um for</h1>
+
+<script>
+var listaDeFruta=["limão", "laranja", "melão", "melancia", "jaca"]
+
+var ulEl = document.createElement("ul")
+console.log(ulEl)
+
+var bodyEl = document.getElementsByTagName("body")
+console.log(bodyEl)     //para vê o indice do elemento body
+console.log(bodyEl[0])  //para vê o body
+
+//Dentro do body foi adicionado a tag ul
+bodyEl[0].appendChild(ulEl)
+
+// Vamos usar a tag ul e adicionar numa lista no body
+var listaNoBody = document.getElementsByTagName("ul")
+console.log(listaNoBody);     // para vê o indice do elemento ul
+console.log(listaNoBody[0])   // para vê o ul
+
+//Vamos capturar a lista de fruta
+for(var i=0; i<listaDeFruta.length; i++){
+    console.log(listaDeFruta[i])          // só para verificar se vai imprimir a lista no console
+
+    //criar o elemento li dentro do elemento ul
+    var liEl = document.createElement("li")
+    console.log(liEl)    //verificar se criou o li
+
+    //Adicionar o texto 
+    var textoEl = document.createTextNode(listaDeFruta[i])
+    
+    //Adicionar o texto dentro do elemento li
+    liEl.appendChild(textoEl)
+
+    //Adicionar a li dentro do Body
+    listaNoBody[0].appendChild(liEl)
+}
+
+</script>
+
+</body>
+</html>

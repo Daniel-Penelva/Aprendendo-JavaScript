@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>DOM - Document Object Model</h1>
+
+  <p>DOM é tudo aquilo que está no HTML, OU SEJA, todas as tags HTML. DOM facilita que você acesse através 
+    do JavaScript esses tipos de elemetos. Os acessos sao feitos através de eventos ou ligaçoes de elementos.
+  </p>
+
+  <h2>getElementByClassName</h2>
+  <p>Para acessar uma classe especifica.</p>
+
+  <div class="urso"> Urso 1 </div>
+  <div class="urso"> Urso 2 </div>
+
+  <div class="gato"> gato </div>
+
+  <h2>getElementByTagName</h2>
+  <p>Para acessar uma tag HTML especifica.</p>
+
+  <h2>getElementById</h2>
+  <p>Para acessar um elemento id da tag HTML.</p>
+
+  <div id="time-pequeno">Fluminense</div>
+
+  <div id="time-grande">Flamengo</div>
+
+  <h2>querySelector</h2>
+  <p class="teste">É uma simplificação do getElementById, getElementByTagName e getElementByClassName. Ou seja, 
+    retorna o primeiro elemento dentro do documeto que foi especificado pelo seletor. O querySelector() aceita 
+    os atributos ids, classes e outros parametros de seleção. OBS. querySelector NÃO retorna array.
+  </p>
+
+  <h2>querySelectorAll</h2>
+  <p>É uma simplificação do getElementById, getElementByTagName e getElementByClassName. 
+    O querySelector retorna o primeiro elemento dentro do documento e querySelectorAll retorna uma lista de 
+    elementos presentes no documento.
+  </p>
+
+  <div class="programacao">JAVA</div>
+  <div class="programacao">Python</div>
+  <div class="programacao">PHP</div>
+
+  <div id="carro">
+    <div class="importado">Ferrari</div>
+    <div class="importado">BMW</div>
+    <div class="importado">Porsche</div>
+    <div class="importado">Mustang</div>
+  </div>
+
+  <div id="carro1">
+    <div class="nacional">Corsa</div>
+    <div class="nacional">Celta</div>
+    <div class="nacional">Voyage</div>
+    <div class="nacional">Peugeot</div>
+  </div>
+
+  <h2>createElement</h2>
+  <p> Cria o elemento HTML especificado </p>
+
+  <h2>appendChild</h2>
+  <p> Consegue inserir um elemento dentro do outro.</p>
+  <p>O appendChild acrescenta ao elemento selecionado o que for declarado na sequência entre parênteses. 
+    No caso você havia criado um elemento li e colocou no corpo do html. No entanto, geralmente o li vem dentro
+    de um elemento ul. Então era preciso criar o elemento ul e inserir o li dentro dele</p>
+
+    <div id="cor">
+    
+    </div>
+
+  <h2>removeChild</h2>
+  <p> Consegue deletar um elemento dentro do outro.</p>
+
+  <h2>parentNode</h2>
+  <p> É uma propriedade DOM somente leitura que retorna o nó (node) parente de um Node referenciado na árvore DOM.</p>
+
+  <div id="linux">
+      <div class="ubuntu"> Ubunto
+         <div class="elementaryos"> Elementary 05</div>
+      </div>
+
+      <div class="debian"></div>
+  </div>
+
+<script>  
+
+/*
+getElementByClassName
+Vai transformar a busca de classes numa coleção de HTML.
+Essa coleção de HTML irão ser chamadas atraves dos indices. Ex: No console do navegador é possivel verificar
+a posição do indice que representa a classe de busca. 
+Na class "urso" podemos ver que sao dois indices, no caso, 0 e 1.
+*/
+
+console.log(document.getElementsByClassName("urso")[1])
+
+console.log(document.getElementsByClassName("gato")[0])
+
+
+/* getElementByTagName */
+
+console.log(document.getElementsByTagName("div"))
+
+/* getElementById */
+
+console.log(document.getElementById("time-pequeno"))
+
+console.log(document.getElementById("time-grande").innerHTML)  //innerHTML - pega o que está escrito dentro da div
+
+/* querySelector */
+console.log(document.querySelector(".urso"))      // acessa o id
+console.log(document.querySelector("#time-grande")) // acessa a class
+console.log(document.querySelector("h2"))          // acessa a tag
+console.log(document.querySelector("p.teste"))  // Voce acessa o p e a class
+
+/* querySelectorAll */
+console.log(document.querySelectorAll(".programacao"))
+console.log(document.querySelectorAll(".importado"))
+
+console.log(document.getElementById("carro").querySelectorAll(".importado")) // outra forma de acessar
+console.log(document.getElementById("carro").querySelectorAll(".importado")[1].innerHTML) // acessando o valor da tag 1
+
+//Pode criar uma condição para verificar se existe e se é maior que 1
+if(document.getElementById("carro1").querySelectorAll(".nacional").length > 1){
+  console.log("carro nacional")
+}
+
+/* createElement */
+console.log(document.createElement("div"))  // criando uma div
+
+var img = document.createElement("img")
+img.src = "https://picsum.photos/200/300?grayscale"
+console.log(img)
+
+var p = document.createElement("p")
+p.innerHTML = "Olá Mundo!"
+console.log(p)
+
+/* appendChild 
+
+1º - Criar um elemento;
+2º - Pegar o elemento que você quer usar para adicionar dentro dele, no caso, a div atraves do seu identificador id
+3º Adicionar o elemento através do appendChild 
+*/
+
+var azul = document.createElement("p");
+azul.innerHTML = "Azul";
+
+document.getElementById("cor").appendChild(azul);
+
+var verde = document.createElement("p")
+verde.innerHTML = "Verde"
+document.getElementById("cor").appendChild(verde)
+
+var amarelo = document.createElement("p")
+amarelo.innerHTML = "Amarelo"
+document.getElementById("cor").appendChild(amarelo)
+
+/* removeChild */
+
+document.getElementById("cor").removeChild(azul);
+
+/* parentNode*/
+// Para saber qual é o elemento pai do elementaryos
+console.log(document.querySelector(".elementaryos").parentNode)
+
+// Para saber qual é o elemento pai do elementaryos e do ubunto 
+console.log(document.querySelector(".elementaryos").parentNode.parentNode)
+
+</script>
+
+</body>
+</html>

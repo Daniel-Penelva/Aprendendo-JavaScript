@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    background-image:linear-gradient(to right,#E65763, #340730);
+    text-align: center;
+    padding-top: 30px;
+}
+
+#tasks-container{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* task form */
+#tasks-header{
+    margin-top: 40px;
+}
+
+#add-task-form{
+    position: relative;
+}
+
+/* os inputs não ultrapassam o limite de 500px*/
+#add-task-form input{
+    box-sizing: border-box;
+    border: 1px solid #340730;
+    background-color: #afff;
+    color: #340730;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+}
+
+#add-task-form input::placeholder{
+    color: #340730;
+}
+
+#add-task-form input:focus{
+    outline: none;
+}
+
+#add-btn{
+    position: absolute;
+    background: #afff;
+    border: 1px solid #340730;
+    cursor: pointer;               /* aparece a maozinha quando passa o cursor*/
+    transition: .5s;
+    width: 60px;
+    height: 53px;
+    top: 0;
+    right: 0;
+    padding-top: 3px;
+}
+
+#add-btn:hover{
+    background-color: #340730;
+    color:#afff;
+}
+
+ion-icon{
+    font-size: 25px;
+}
+
+/* tasks-container */
+
+/*retirar os marcadores do ul*/
+#task-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+#task-list li{
+    text-align: left;  /*adiciona os marcadores no lado esquerdo da tela*/
+    height: 50px;      /*adiciona um espaço na vertical de 50 px*/
+    line-height: 50px; /*alinha o espaço vertical*/
+    position: relative;
+    border-bottom: 3px solid #340730;  /*adiciona uma borda de 3px entre os marcadores*/
+    background-color: #afff;           
+    color: #340730;
+    margin-bottom: 10px;                 /* separa na posição de baixo entre os marcadores */ 
+    padding-left: 15px;
+    transition: .5s;
+    font-weight: bold;
+}
+
+/*Aumentar a fonte do texto que está dentro do input*/
+#task-list li span{
+font-size: 18px;
+}
+
+#task-list ion-icon{
+    position: absolute;
+    top: 0;
+    height: 40px;
+    transition: .5s;
+    cursor: pointer;
+    width: 30px;
+    padding: 5px;
+}
+
+/* vai adicionar o icone na posição de 40 px*/
+.done-btn{
+    right: 40px;
+}
+
+.done-btn:hover{
+    color: #afff;
+    background-color: #09E01B;
+}
+
+.remove-btn{
+    right: 0;
+}
+
+.remove-btn:hover{
+    color: #afff;
+    background-color: #EB0927;
+}
+
+/* essa classe vai ser usada para esconder o template de cada marcador li */
+.hide{
+    display: none;
+}
+
+#task-list li.done{
+    background-color: #340730;
+    color: #afff;
+    text-decoration: line-through;  /* vai passar um risco no marcador li */
+}
+
+
