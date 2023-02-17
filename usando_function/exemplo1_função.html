@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+
+      function minhaFuncao(){
+        document.getElementById('demo').innerHTML = "Aprendendo Função JavaScript!"
+      }
+
+      function testandoFuncao(){
+        document.getElementById('demo1').innerHTML = "Testando função!"
+      }
+
+    </script>
+  </head>
+  <body>
+
+    <p id="demo">Olá JavaScript!</p>
+    <button type="button" onclick="minhaFuncao();">Clica-me</button>
+
+    <h2>OBS. O ponto e virgula é opcional!</h2>
+    <br>
+    <p>----------------------------------------------------------------</p>
+
+    <p id="demo1">Olá JavaScript!</p>
+    <button type="button" onclick="testandoFuncao()">Clica-me</button>
+
+    <br>
+    <p>----------------------------------------------------------------</p>
+
+    <p id="demo2">Olá JavaScript!</p>
+    <button type="button" onclick="testandoFuncao1()">Clica-me</button>
+
+
+    <script>
+        function testandoFuncao1(){
+            document.getElementById('demo2').innerHTML = "Testando função!"
+        }
+    </script>
+
+  </body>
+</html>

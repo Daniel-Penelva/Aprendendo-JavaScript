@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> O JavaScript pode alterar os valores de atributo HTML.</p>
+    <p>Nesse caso, o JavaScript altera o valor do atributo src (source = fonte) de uma imagem.</p>
+
+   <button type="button" onclick='document.getElementById("id_lampada").src="pic_bulbon.gif"'>Acenda a luz</button>
+
+   <img id="id_lampada" src="pic_bulboff.gif" style="width: 100px;">
+
+   <button type="button" onclick="document;getElementById('id_lampada').src='pic_bulboff.gif'">Apaga a luz</button>
+
+</body>
+</html>
