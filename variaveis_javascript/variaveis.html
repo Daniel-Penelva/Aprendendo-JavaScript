@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Variáveis - são quatro maneiras de declarar variáveis Javascript:</h1>
+    <p>Usando: var - para navegadores mais antigos. </p>
+    <p>Usando: let - essas declarações de variáveis foram adiconadas em 2015.</p>
+    <p>Usando: const - para uma regra geral</p>
+    <p>Usando: nada</p>
+
+    <h2>Exemplo 1: usando var</h2>
+    
+    <p id="soma"></p>
+
+    <br>
+    <p id="subtracao"></p>
+
+    <br>
+    <p id="multiplicacao"></p>
+
+    <br>
+    <p id="porcentoAdcional"></p>
+
+    <script>
+
+     // Usando var   
+
+      var x = 10;
+      var y = 5;
+      var z = x + y;
+
+      document.getElementById("soma").innerHTML = "O elemento z é: " + z;
+
+       // Usando let
+
+       let a = 30, b = 20;
+
+       document.getElementById('subtracao').innerHTML = "a =" + a + "; " + "b =" + b + " -> " + " a - b = " + (a - b);
+
+       // Usando nada
+
+       t = 10; 
+       s = 5;
+       p = t * s;
+
+       document.getElementById('multiplicacao').innerHTML = "Multiplicação -> 10 * 5 = " + p;
+
+       // Usando const
+
+       const precoA = 10;
+       const precoB = 2;
+       let porcento = precoA + ((precoA*precoB)/100);
+
+       document.getElementById('porcentoAdcional'). innerHTML = "Valor total de adicional de 2% = " + porcento;
+    </script>
+
+    
+  </body>
+</html>

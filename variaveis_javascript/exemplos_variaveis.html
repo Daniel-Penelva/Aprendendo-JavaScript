@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <br />
+    <p id="operador"></p>
+
+    <br />
+    <p id="constante"></p>
+
+    <br />
+    <p>x = 5 + 2 + 3</p>
+    <p id="ex1"></p>
+
+    <br />
+    <p>x = "5" + 2 + 3</p>
+    <p id="ex2"></p>
+
+    <br />
+    <p>"John" + " " + "Doe"</p>
+    <p id="nomeCompleto"></p>
+
+    <br />
+    <p>Declarando variáveis com $ e _ </p>
+    <p id="soma"></p>
+
+    <script>
+      let carro = "Ferrari";
+      document.getElementById("demo").innerHTML = carro;
+
+      // Operador de Atribuição
+      var x = 10;
+      x = x + 5;
+      document.getElementById("operador").innerHTML = x;
+
+      // Variavel constante
+      const pi = 3.14;
+      document.getElementById("constante").innerHTML = pi;
+
+      // exemplos
+      let y = 5 + 2 + 3;
+      document.getElementById("ex1").innerHTML = y;
+
+      let z = "5" + 2 + 3;
+      document.getElementById("ex2").innerHTML = z;
+
+      let nome = "John" + " " + "Doe";
+      document.getElementById("nomeCompleto").innerHTML = nome;
+
+      // exemplos de nome de variáveis 
+      let $preco = 10;
+      let $ = 20;
+      let _preco = 15;
+
+      total = $preco + $ + _preco;
+      document.getElementById("soma").innerHTML = total;
+
+    </script>
+  </body>
+</html>
