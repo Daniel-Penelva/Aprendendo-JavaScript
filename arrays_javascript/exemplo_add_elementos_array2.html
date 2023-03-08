@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Lista de Frutas</h2>
+
+    <h3 id="demo"></h3>
+
+    <button onclick="frutaFavorita()">Add Fruta</button>
+
+    <h2>Pode associar também:</h2>
+    <h3 id="associacao"></h3>
+
+    <h3></h3>
+
+    <script>
+        
+      const frutas = ["Maça", "Uva", "Melão"];
+
+      document.getElementById("demo").innerHTML = frutas;
+
+      /* Função para adicionar o elemento na lista - usa-se o método push() */
+      function frutaFavorita() {
+        frutas[frutas.length] = "limão";
+        frutas[frutas.length] = "Pera";
+
+        /* Vai ser adicionado a um evento do botão */
+        document.getElementById("demo").innerHTML = frutas;
+
+        /* Associando elementos */
+        document.getElementById("associacao").innerHTML = "Fruta:" + frutas[0] + " Tamanho da lista: " + frutas.length; 
+      }
+
+      /* OBS. Adicionar elementos com índices altos pode criar "buracos" indefinidos em uma matriz! */
+
+    </script>
+  </body>
+</html>

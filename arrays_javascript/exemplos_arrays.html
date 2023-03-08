@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Lista de Carros</h2>
+    <h3 id="car"></h3>
+
+    <br />
+
+    <h2>Lista de Frutas</h2>
+    <h3 id="lista_fruta"></h3>
+
+    <br />
+
+    <h2>Lista de Linguagem de Programação</h2>
+    <h3 id="ling_Programacao"></h3>
+
+    <br />
+
+    <h2>Capturando valores do array</h2>
+    <h3 id="demo"></h3>
+
+    <h2>Lista de valores aleatorios</h2>
+    <h3 id="pessoa"></h3>
+    <br />
+    <h3 id="dadoP"></h3>
+
+    <h2>Lista de objetos</h2>
+    <h3 id="usu"></h3>
+
+    <br />
+
+    <h2>Total de Frutas</h2>
+    <h3 id="total_frutas"></h3>
+
+    <br />
+
+    <h2>Acessando por índices numéricos</h2>
+    <h3 id="indice"></h3>
+
+    <br />
+
+    <script>
+      /* Exemplo 1*/
+      const carros = ["Ferrari", "Porsche", "Mclaren", "Aston Martin"];
+
+      document.getElementById("car").innerHTML = carros;
+
+      /* Exemplo 2 */
+      const frutas = [];
+      frutas[0] = "Maça";
+      frutas[1] = "Pera";
+      frutas[2] = "Uva";
+      frutas[3] = "Melancia";
+
+      document.getElementById("lista_fruta").innerHTML = frutas;
+
+      /* Exemplo 3 */
+      const programacao = new Array("JAVA", "PHP", "JAVASCRIPT", "C++");
+      document.getElementById("ling_Programacao").innerHTML = programacao;
+
+      /* Exemplo 4 */
+      document.getElementById("demo").innerHTML = carros[2] + " - " + frutas[0];
+
+      /* Exemplo 5 - Arrays são um tipo especial de objetos. O typeofoperador em JavaScript retorna 
+      "objeto" para arrays.*/
+      const dadosPessoais = ["Daniel", "Penelva", 35, 1.75];
+      document.getElementById("pessoa").innerHTML = dadosPessoais;
+      document.getElementById("dadoP").innerHTML = dadosPessoais[2];
+
+      /* Exemplo 6 - Propriedades de objetos */
+      const usuario = { nome: "Daniel", sobrenome: "Penelva", idade: 35 };
+      document.getElementById("usu").innerHTML =
+        "Nome: " + usuario.nome +
+        " Sobrenome: " + usuario.sobrenome +
+        " Idade: " +  usuario.idade;
+
+
+     /* Exemplo 7 - Propriedades de métodos */
+     document.getElementById("total_frutas").innerHTML = frutas.length;
+
+      /* Exemplo 8 - Acessando por índices numéricos - Acessando o último elemento da matriz*/
+     document.getElementById("indice").innerHTML = frutas[frutas.length-1];
+
+    </script>
+  </body>
+</html>

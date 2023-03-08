@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <h2>Exemplo Typeof</h2>
+    <h3 id="list_fruta"></h3>
+
+    <br />
+
+    <h2>Exemplo Instanceof</h2>
+    <h3 id="list_car"></h3>
+
+    <script>
+      
+      /* Typeof retorna um object */
+
+      const frutas = ["Banana", "Maça", "Pera", "Uva"];
+      document.getElementById("list_fruta").innerHTML = typeof frutas;
+
+      /* Adicionar elementos com índices altos pode criar "buracos" indefinidos em uma matriz */
+      const carros = ["BMW", "Ferrari", "Porsche"];
+      document.getElementById("list_car").innerHTML = carros instanceof Array;
+
+    </script>
+  </body>
+</html>
